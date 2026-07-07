@@ -1,6 +1,14 @@
-# Rust Learning Activities
+# Rust Piece
 
-This repository contains a collection of Rust learning activities. Each activity focuses on a specific topic or concept in Rust programming. The activities are designed to help beginners learn Rust through practical examples and exercises.
+<p align="center">
+  <img src="./assets/luffy-laughing.webp" alt="Luffy laughing" width="240">
+</p>
+
+> Set sail into Rust, one concept at a time.
+
+Rust Piece is an open-source collection of beginner-friendly Rust activities. Each
+exercise is a new island on the journey: learn a concept, write some code, and
+keep moving toward becoming the Rust King!
 
 ## Table of Contents
 
@@ -37,5 +45,11 @@ Each activity is contained within its own Rust source file (`.rs`) located in th
 Example:
 
 ```sh
-cargo run --bin a1
+cargo run -q --bin a1
+```
+
+Run the project welcome message with:
+
+```sh
+cargo run --bin rust-piece
 ```
