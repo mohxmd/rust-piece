@@ -12,44 +12,44 @@
 // * The name and colors should be printed using a function
 
 // * Use a struct for a persons age, name, and favorite color
+// * The color and name should be stored as a String
 struct Person {
-    name: String,
     age: i32,
-    color: String,
+    name: String,
+    fav_color: String,
 }
 
-
 // * The name and colors should be printed using a function
-fn print_details(name: &str, color: &str) {
+fn print_person(name: &str, fav_color: &str) {
     println!("Name: {:?}", name);
-    println!("Favorite Color: {:?}", color);
+    println!("Color: {:?}", fav_color);
 }
 
 fn main() {
     // * Create and store at least 3 people in a vector
-    let peoples = vec![
-        Person{
-            age: 7,
-            name: String::from("Liyana"),
-            color: "Green".to_owned(),
+    let pirates = vec![
+        Person {
+            age: 9,
+            name: "Shanks".to_owned(),
+            fav_color: "red".to_owned(),
         },
-        Person{
-            age: 8,
-            name: String::from("Liviya"),
-            color: "Red".to_owned(),
+        Person {
+            age: 17,
+            name: String::from("Luffy"),
+            fav_color: String::from("red"),
         },
-        Person{
-            age: 14,
-            name: String::from("Ali"),
-            color: "Black".to_owned(),
-        }
+        Person {
+            age: 19,
+            name: String::from("Zoro"),
+            fav_color: String::from("green"),
+        },
     ];
 
     // * Iterate through the vector using a for..in loop
-    for person in peoples {
+    for pirate in pirates {
         // * Use an if expression to determine which person's info should be printed
-        if person.age <= 10 {
-            print_details(&person.name, &person.color);
+        if pirate.age <= 10 {
+            print_person(&pirate.name, &pirate.fav_color);
         }
     }
 }

@@ -21,9 +21,9 @@ fn main() {
     // * Use an if..else if..else block to determine what to print
     if y > 5 {
         println!(">5");
-    }else if y < 5 {
+    } else if y < 5 {
         println!("<5");
-    }else {
-        println!("==5");
+    } else {
+        println!("=5");
     }
 }

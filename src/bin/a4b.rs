@@ -12,12 +12,12 @@
 
 fn main() {
     // * Use a variable set to any integer
-    let my_number = 2;
+    let x = 2;
     // * Use a match expression to determine which message to display
-    match my_number {
-        1 => println!("One"),
-        2 => println!("Two"),
-        3 => println!("Three"),
-        _ => println!("some other number"),
+    match x {
+        1 => println!("one"),
+        2 => println!("two"),
+        3 => println!("three"),
+        _ => println!("other"),
     }
 }

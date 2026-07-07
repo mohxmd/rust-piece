@@ -9,43 +9,36 @@
 // * Use a function to print out the drink flavor and ounces
 // * Use a match expression to print the drink flavor
 
-// * Use an enum to create different flavors of drinks
 enum Flavor {
-    Sweet,
-    Fruity,
-    Spice,
+    Lemonade,
+    GrapeJuice,
+    AppleJuice,
 }
 
-// * Use a struct to store drink flavor and fluid ounce information
 struct Drink {
     flavor: Flavor,
-    fluid_ounce: f64,
+    fluid_oz: f32,
 }
 
-// * Use a function to print out the drink flavor and ounces
-fn display_drink(drink: Drink) {
-    // * Use a match expression to print the drink flavor
+fn print_drink(drink: Drink) {
     match drink.flavor {
-        Flavor::Sweet => println!("Flavor: Sweet"),
-        Flavor::Fruity => println!("Flavor: Fruite"),
-        Flavor::Spice => println!("Flavor: Spice"),
+        Flavor::AppleJuice => println!("flavor: Apple, juice oz: {:?}", drink.fluid_oz),
+        Flavor::Lemonade => println!("flavor: Lemonade, oz: {:?}", drink.fluid_oz),
+        Flavor::GrapeJuice => println!("flavor: Grape, juice oz: {:?}", drink.fluid_oz),
     }
-
-    println!("Ounce: {:?}", drink.fluid_ounce);
 }
 
 fn main() {
-    let spice_drink = Drink {
-        flavor: Flavor::Spice,
-        fluid_ounce: 5.7
+    let apple_juice: Drink = Drink {
+        flavor: Flavor::AppleJuice,
+        fluid_oz: 12.0,
+    };
+    print_drink(apple_juice);
+
+    let lemonade: Drink = Drink {
+        flavor: Flavor::Lemonade,
+        fluid_oz: 10.0,
     };
 
-    let fruity_drink = Drink {
-        flavor: Flavor::Fruity,
-        fluid_ounce: 10.0,
-    };
-
-    display_drink(spice_drink);
-
-    display_drink(fruity_drink);
+    print_drink(lemonade);
 }

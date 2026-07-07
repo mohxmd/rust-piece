@@ -12,15 +12,15 @@
 
 // * Use an enum for the box color
 enum Color {
-    Black,
-    Brown,
+    Green,
+    Blue,
 }
 
 impl Color {
     fn print(&self) {
         match self {
-            Color::Black => println!("black"),
-            Color::Brown => println!("brown"),
+            Color::Green => println!("Color: Green"),
+            Color::Blue => println!("Color: Blue"),
         }
     }
 }
@@ -33,19 +33,18 @@ struct Dimensions {
 
 impl Dimensions {
     fn print(&self) {
-        println!("Width: {:?}", self.width);
-        println!("Height: {:?}", self.height);
-        println!("Depth: {:?}", self.depth);
+        let (width, height, depth) = (self.width, self.height, self.depth);
+        println!("Width: {:?}", width);
+        println!("Height: {:?}", height);
+        println!("Depth: {:?}", depth);
     }
 }
 
 // * Use a struct to encapsulate the box characteristics
-// * Must include dimensions, weight, and color
-
 struct ShippingBox {
-    color: Color,
-    weight: f64,
     dimensions: Dimensions,
+    weight: f64,
+    color: Color,
 }
 
 // * Implement functionality on the box struct to create a new box
@@ -53,9 +52,9 @@ struct ShippingBox {
 impl ShippingBox {
     fn new(weight: f64, color: Color, dimensions: Dimensions) -> Self {
         Self {
-            weight: weight,
             color,
-            dimensions
+            dimensions,
+            weight,
         }
     }
 
@@ -67,13 +66,12 @@ impl ShippingBox {
 }
 
 fn main() {
-    let dimensions_for_small_box = Dimensions {
-        width: 1.0,
+    let small_dimensions = Dimensions {
+        depth: 3.0,
+        width: 2.0,
         height: 2.0,
-        depth: 3.0
     };
 
-    let small_box = ShippingBox::new(3.6, Color::Black, dimensions_for_small_box);
-
-    small_box.print();
+    let free_box = ShippingBox::new(5.0, Color::Green, small_dimensions);
+    free_box.print();
 }

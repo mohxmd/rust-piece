@@ -2,7 +2,7 @@
 //
 // Program requirements
 // * Display the results of the sum of two numbers
-// 
+//
 // Note:
 // * Use a function to add two numbers together
 // * Use  a function to display teh result

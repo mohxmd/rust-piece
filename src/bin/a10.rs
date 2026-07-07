@@ -12,14 +12,13 @@
 // * Use a match expression to determine which message
 //   to print
 
-
 // * Use a match expression to determine which message
 //   to print
 
 fn print_message(gt_100: bool) {
-    match  gt_100 {
-        true => println!("It's big"),
-        false => println!("It's small")
+    match gt_100 {
+        true => println!("its big"),
+        false => println!("its small"),
     }
 }
 
@@ -28,6 +27,7 @@ fn main() {
     //   an if..else expression to store whether the value
     //   is > 100 or <= 100
     let value = 100;
+    // let is_gt_100 = if value > 100 { true } else { false };
     let is_gt_100 = value > 100; // shortcut instead of doing if..else
 
     print_message(is_gt_100);

@@ -14,9 +14,9 @@ fn main() {
 
     if x > 5 {
         println!(">5");
-    }else if x < 5 {
+    } else if x < 5 {
         println!("<5");
-    }else {
+    } else {
         println!("==5");
     }
 }

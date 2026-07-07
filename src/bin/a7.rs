@@ -10,26 +10,21 @@
 // * Use a match expression to determine which color
 //   name to print
 
-// * Use an enum with color names as variants
 enum Color {
     Red,
     Green,
     Blue,
-    Black,
 }
 
-// * Use a function to print the color name
-// * The function must use the enum as a parameter
-fn print_color(color: Color) {
-    // * Use a match expression to determine which color
+fn print_color_name(color: Color) {
     match color {
-        Color::Red => println!("Red"),
-        Color::Green => println!("Green"),
-        Color::Blue => println!("Blue"),
-        Color::Black => println!("Black"),
+        Color::Red => println!("red"),
+        Color::Green => println!("green"),
+        Color::Blue => println!("blue"),
     }
 }
 
 fn main() {
-    print_color(Color::Black);
+    let color = Color::Green;
+    print_color_name(color);
 }

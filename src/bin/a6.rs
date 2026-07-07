@@ -19,5 +19,5 @@ fn main() {
         println!("{:?}", counter);
         counter -= 1;
     }
-    println!("Done!");
+    println!("done!");
 }

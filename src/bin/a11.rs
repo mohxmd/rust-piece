@@ -9,29 +9,22 @@
 // * Create a function to display the quantity, with the struct as a parameter
 // * Create a function to display the id number, with the struct as a parameter
 
-// * Use a struct for the grocery item
 struct GroceryItem {
-    // * Use two i32 fields for the quantity and id number
     id: i32,
-    quantity: i32,
+    qt: i32,
 }
 
-// * Create a function to display the quantity, with the struct as a parameter
-fn display_quantity(item: &GroceryItem) {
-    println!("Quantity: {:?}", item.quantity);
+fn display_qt(item: &GroceryItem) {
+    println!("Qt: {:?}", item.qt);
 }
 
-// * Create a function to display the id number, with the struct as a parameter
 fn display_id(item: &GroceryItem) {
     println!("Id: {:?}", item.id);
 }
 
 fn main() {
-    let my_item = GroceryItem {
-        id: 999,
-        quantity: 3,
-    };
+    let item = GroceryItem { id: 123, qt: 20 };
 
-    display_quantity(&my_item);
-    display_id(&my_item);
+    display_id(&item);
+    display_qt(&item);
 }

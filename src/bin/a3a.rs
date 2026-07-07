@@ -12,12 +12,14 @@
 // * Use teh println macro to display message to the terminal
 
 fn main() {
-    // * Display a message based on the value of a boolean variable
-    let my_bool = true;
+    // * Displays a message based on the value of a boolean variable
+    let is_display = false;
+
     // * When the variable is set to true, display "hello"
-    if my_bool {
-        println!("Hello");
-    }else {
-        println!("goodbye");
+    // * When the variable is set to false, display "goodbye"
+    if is_display {
+        println!("hello");
+    } else {
+        println!("goodbye")
     }
 }
