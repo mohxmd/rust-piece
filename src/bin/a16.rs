@@ -8,24 +8,36 @@
 // * Use a struct containing the student's name and locker assignment
 // * The locker assignment should use an Option<i32>
 
-// * Use a struct containing the student's name and locker assignment
 struct Student {
     name: String,
-    locker: Option<i32>,
+    locker_assignment: Option<i32>,
 }
-// * The locker assignment should use an Option<i32>
 
 fn main() {
-    let liyana = Student {
-        name: "Liyana".to_owned(),
-        locker: Some(3)
-    };
+    let students = vec![
+        Student {
+            name: "Naruto".to_owned(),
+            locker_assignment: Some(30021),
+        },
+        Student {
+            name: "Itachi".to_owned(),
+            locker_assignment: None,
+        },
+        Student {
+            name: "Sasuke".to_owned(),
+            locker_assignment: Some(10012),
+        },
+    ];
 
-    print!("Student: {:?}", liyana.name);
+    for student in students {
+        println!("Student");
+        println!("Name: {}", student.name);
 
-    match liyana.locker {
-        Some(num) => println!("locker number: {:?}", num),
-        None => println!("No locker assigned")
+        match student.locker_assignment {
+            Some(locker) => println!("Locker: {}", locker),
+            None => println!("Locker: No locker assigned"),
+        }
+
+        println!("------------------------");
     }
-
 }

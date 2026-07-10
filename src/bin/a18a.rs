@@ -16,4 +16,41 @@
 //   * For the Ok variant, print any message you want
 //   * For the Err variant, print out the error message
 
-fn main() {}
+#![allow(dead_code)]
+#[derive(Debug)]
+struct Adult {
+    name: String,
+    age: u8,
+}
+
+impl Adult {
+    fn new(name: &str, age: u8) -> Result<Self, &str> {
+        if age >= 21 {
+            Ok(Self {
+                name: name.to_string(),
+                age,
+            })
+        } else {
+            Err(&"Age must be 21 or older.")
+        }
+    }
+
+    fn print(&self) {
+        println!("{:?}", self);
+    }
+}
+
+fn main() {
+    let child = Adult::new("Naruto", 18);
+    let adult = Adult::new("Itachi", 26);
+
+    match child {
+        Ok(adult) => adult.print(),
+        Err(error) => println!("{}", error),
+    }
+
+    match adult {
+        Ok(adult) => adult.print(),
+        Err(error) => println!("{}", error),
+    }
+}

@@ -20,7 +20,7 @@ struct Person {
 }
 
 // * The name and colors should be printed using a function
-fn print_person(name: &str, fav_color: &str) {
+fn print(name: &str, fav_color: &str) {
     println!("Name: {:?}", name);
     println!("Color: {:?}", fav_color);
 }
@@ -49,7 +49,7 @@ fn main() {
     for pirate in pirates {
         // * Use an if expression to determine which person's info should be printed
         if pirate.age <= 10 {
-            print_person(&pirate.name, &pirate.fav_color);
+            print(&pirate.name, &pirate.fav_color);
         }
     }
 }
