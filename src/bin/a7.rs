@@ -10,6 +10,7 @@
 // * Use a match expression to determine which color
 //   name to print
 
+#[allow(dead_code)]
 enum Color {
     Red,
     Green,

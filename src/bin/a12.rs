@@ -11,6 +11,8 @@
 // * Implement functionality on the box struct to print the characteristics
 
 // * Use an enum for the box color
+
+#[allow(dead_code)]
 enum Color {
     Green,
     Blue,

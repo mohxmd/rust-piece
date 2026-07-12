@@ -8,6 +8,7 @@
 // * Run `cargo test --bin a23` to check your program.
 // * Only edit the part_1, part_2, and part_3 functions.
 
+#[allow(dead_code)]
 fn part_1() -> bool {
     // We are checking whether or not this particular user
     // has an access level. The "admin" user does have
@@ -16,6 +17,7 @@ fn part_1() -> bool {
     maybe_access("admin").is_some()
 }
 
+#[allow(dead_code)]
 fn part_2() -> Option<Access> {
     // "Root" is equivalent to Access::Admin, but it is
     // not listed in the maybe_access function.
@@ -23,6 +25,7 @@ fn part_2() -> Option<Access> {
     maybe_access("root").or_else(root)
 }
 
+#[allow(dead_code)]
 fn part_3() -> Access {
     // "Alice" is not a listed user, so she will be a guest.
     // Note: Use unwrap_or_else.

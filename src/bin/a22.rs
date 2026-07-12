@@ -11,6 +11,7 @@
 //     determine how the they should operate.
 
 /// Ensures n is >= lower and <= upper.
+#[allow(dead_code)]
 fn clamp(n: i32, lower: i32, upper: i32) -> i32 {
     if n < lower {
         lower
@@ -37,6 +38,7 @@ fn clamp_above_range() {
 }
 
 /// Divides a and b.
+#[allow(dead_code)]
 fn div(a: i32, b: i32) -> Option<i32> {
     if b == 0 {
         None
@@ -56,6 +58,7 @@ fn div_by_zero() {
 }
 
 /// Takes two strings and places them immediately one after another.
+#[allow(dead_code)]
 fn concat(first: &str, second: &str) -> String {
     format!("{}{}", first, second)
 }

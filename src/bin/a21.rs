@@ -34,7 +34,7 @@ fn main() {
     });
 
     match user {
-        Some(user) => println!("User {user:?}"),
+        Some(user) => println!("User {} {}", user.user_id, user.name),
         None => println!("not found"),
     }
 }
