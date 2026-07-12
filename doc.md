@@ -1370,6 +1370,29 @@ memory
 ♟️ Default behavior is to `move` memory to a new owner <br />
 &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;♟️ Use an ampersand (&) to allow code to `borrow` memory <br />
 
+### Fast Rule of Thumb
+
+- Stack-only values are usually copied
+- Heap-owning values are usually moved
+
+Types that are commonly `Copy`:
+
+- `i32`
+- `u8`
+- `bool`
+- `char`
+- `f64`
+
+These implement the `Copy` trait, so assigning them to another variable usually copies the value.
+
+Types that are usually moved instead:
+
+- `String`
+- `Vec<T>`
+- `HashMap<K, V>`
+
+These types own heap data, so assigning them to another variable usually moves ownership unless you explicitly borrow or clone.
+
 ```rust
 struct Book {
     pages: 132,
